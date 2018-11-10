@@ -15,8 +15,7 @@ for i in range(0, 100):
         profile = MGMT.tm.ltm.profile.server_ssls.server_ssl.create(\
         name=profile_name, \
         partition='Common', \
-        ciphers='!SSLv2:!EXPORT:ECDHE+AES-GCM:ECDHE+AES:RSA+AES-GCM:RSA+AES:\
-                 ECDHE+3DES:RSA+3DES:-MD5:-SSLv3:-RC4')
+        ciphers='!SSLv2:!EXPORT:ECDHE+AES-GCM:ECDHE+AES:RSA+AES-GCM:RSA+AES:ECDHE+3DES:RSA+3DES:-MD5:-SSLv3:-RC4')
     except Exception as exception:
         print "Error '{0}' occured. Arguments {1}.".format(exception.message, exception.args)
 
